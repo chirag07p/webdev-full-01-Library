@@ -39,9 +39,9 @@ fix/issue-<number>-<short-description>
 **Examples:**
 
 ```bash
-git checkout -b fix/issue-1-cart-total-calculation
-git checkout -b fix/issue-4-search-case-sensitivity
-git checkout -b fix/issue-16-unicode-hidden-character
+git checkout -b fix/issue-1-book-search-filter
+git checkout -b fix/issue-4-pagination-display
+git checkout -b fix/issue-16-database-connection-error
 ```
 
 > [!IMPORTANT]
@@ -64,13 +64,19 @@ git checkout -b fix/issue-16-unicode-hidden-character
 
 ### Testing Locally
 
+**Frontend:**
 ```bash
-# Option 1: Open directly
-open index.html
+cd frontend
+npm install
+npm run dev
+# Then visit http://localhost:5173
+```
 
-# Option 2: Use a local server (recommended)
-python3 -m http.server 8080
-# Then visit http://localhost:8080
+**Backend:**
+```bash
+cd backend
+npm install
+node server.js
 ```
 
 ---
@@ -86,13 +92,13 @@ fix(scope): brief description of the fix (#issue-number)
 **Examples:**
 
 ```bash
-git commit -m "fix(cart): resolve total string concatenation by using numeric accumulator (#1)"
-git commit -m "fix(search): add case-insensitive comparison for product filtering (#4)"
-git commit -m "fix(css): replace fixed pixel widths with responsive units in product grid (#3)"
+git commit -m "fix(search): add case-insensitive comparison for book filtering (#1)"
+git commit -m "fix(pagination): correct page number bounds validation (#4)"
+git commit -m "fix(backend): fix database connection pool leak (#3)"
 ```
 
 > [!NOTE]
-> Scope should be the affected area: `cart`, `search`, `modal`, `css`, `data`, `a11y`, etc.
+> Scope should be the affected area: `search`, `pagination`, `backend`, `frontend`, `models`, `database`, `ui`, `a11y`, etc.
 
 ---
 
@@ -197,7 +203,7 @@ Describe how you tested your fix:
 - [ ] Tested on Chrome
 - [ ] Tested on Firefox or Safari
 - [ ] Tested on mobile viewport (≤480px)
-- [ ] Tested edge cases (e.g., empty cart, zero quantity, rapid clicks)
+- [ ] Tested edge cases (e.g., empty search results, missing books, invalid IDs)
 
 **Test Evidence:**
 <Describe what you tested and what the results were. Screenshots are encouraged
