@@ -1,4 +1,4 @@
-# 🤝 Contributing to NovaBuy
+# 🤝 Contributing to Library
 
 Thank you for your interest in contributing! This project is a **debugging challenge** — your goal is to find and fix the 20 intentional bugs hidden in the codebase. Here's how to get started.
 
@@ -13,8 +13,8 @@ Click the **Fork** button in the top-right corner of the GitHub repo page. This 
 ### 2. Clone Your Fork
 
 ```bash
-git clone https://github.com/<your-username>/web-dev-challenge-1.git
-cd web-dev-challenge-1
+git clone https://github.com/<your-username>/webdev-full-01-Library.git
+cd webdev-full-01-Library
 ```
 
 ### 3. Add the Upstream Remote
@@ -22,7 +22,7 @@ cd web-dev-challenge-1
 Keep your fork synced with the original repo:
 
 ```bash
-git remote add upstream https://github.com/GDG-Open-Challenge/web-dev-challenge-1.git
+git remote add upstream https://github.com/GDG/webdev-full-01-Library.git
 git fetch upstream
 ```
 
@@ -108,7 +108,7 @@ git push origin fix/issue-<number>-<description>
 
 - Go to your fork on GitHub
 - Click **"Compare & pull request"**
-- Set the base repository to `GDG-Open-Challenge/web-dev-challenge-1` and base branch to `main`
+- Set the base repository to `GDG/webdev-full-01-Library` and base branch to `main`
 - **You MUST follow the PR format below** — PRs that do not follow this format will be requested to revise
 
 ---
